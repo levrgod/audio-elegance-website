@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理员登录 - 音频雅集</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container login-container">
+        <header>
+            <h1>音频雅集</h1>
+            <p>管理员登录</p>
+        </header>
+        <main>
+            <form action="/login" method="post">
+                <div class="form-group">
+                    <label for="username">账户:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">登录</button>
+            </form>
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </main>
+        <footer>
+            <p>&copy; 2025 音频雅集</p>
+        </footer>
+    </div>
+</body>
+</html>
